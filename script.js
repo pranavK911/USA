@@ -37,11 +37,42 @@ const restaurant={
    
 };
 
-const{name}=restaurant;
-console.log(name);
-const {open:o,close:c}=restaurant.openigHours.fri
-console.log(o,c);
+const menu=[...restaurant.starter,...restaurant.mainmenu];
+for(const [i,j] of menu.entries()){
+    // console.log(`${i+1} : ${j}`);
+    console.log(i,j);
+}
 
+
+// const{name}=restaurant;
+// console.log(name);
+// const {open:o,close:c}=restaurant.openigHours.fri
+// console.log(o,c);
+
+
+//---------------Destructuring Object-----
+// let {sat,...otherdays}=restaurant.openigHours;
+// console.log(sat);
+// console.log(otherdays);
+
+//----------- reest and spread--
+
+// function sum(...arr){
+//     let sum=0;
+//     for(let i=0;i<arr.length;i++){
+//         sum+=arr[i];
+//     }console.log(sum);
+// }
+
+// sum(1,2);
+// sum(1,2,3,4,5,6,7,8);
+// sum(1,2,3,4,5);
+// let x=[1,2,3,4,5,6];
+// sum(...x);
+//-------OR----
+// console.log(null || 'helo');
+// //----AND---        
+// console.log(1 && '');
 
 
 // console.log(restaurant.order(1,0));
